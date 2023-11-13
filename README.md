@@ -39,9 +39,11 @@ module "firewall" {
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm)  | >= 3.65.0 |
 
 ## Modules
-| Module                                                                      | Path   |
-|---------------------------------------------------------------------------|-----------|
-[Firewall Rule Collections](https://github.com/data-platform-hq/terraform-azurerm-firewall/tree/init/modules/firewall-rule-collections) | "./modules/firewall-rule-collections" |
+| Module                                                                      | Path   |  Version
+|---------------------------------------------------------------------------|-----------|-----------|
+[Firewall Rule Collections](https://github.com/data-platform-hq/terraform-azurerm-firewall/tree/init/modules/firewall-rule-collections) |  "./modules/firewall-rule-collections" | local |
+[Subnet](https://github.com/data-platform-hq/terraform-azurerm-subnet)| "data-platform-hq/subnet/azurerm"| 1.2.6 |
+[Subnet mgmt](https://github.com/data-platform-hq/terraform-azurerm-subnet)|"data-platform-hq/subnet/azurerm" | 1.2.6  |
 
 ## Resources
 
