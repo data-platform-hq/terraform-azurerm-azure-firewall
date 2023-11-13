@@ -15,7 +15,7 @@ variable "firewall_name" {
 }
 
 variable "resource_group" {
-  description = "The name of the resource group in which to create the resource. Has to be the same resource group as the VNet."
+  description = "The name of the resource group in which to create the Azure firewall."
   type        = string
 }
 

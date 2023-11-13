@@ -30,17 +30,18 @@ module "firewall" {
 | Name                                                                      | Version   |
 |---------------------------------------------------------------------------|-----------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0  |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | >= 3.23.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | >= 3.65.0 |
 
 ## Providers
 
 | Name                                                           | Version   |
 |----------------------------------------------------------------|-----------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm)  | >= 3.23.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm)  | >= 3.65.0 |
 
 ## Modules
-
-firewall-rule-collections
+| Module                                                                      | Version   |
+|---------------------------------------------------------------------------|-----------|
+[Firewall Rule Collections](https://github.com/data-platform-hq/terraform-azurerm-firewall/tree/init/modules/firewall-rule-collections) | local |
 
 ## Resources
 
@@ -58,7 +59,7 @@ firewall-rule-collections
 | <a name="input_sku"></a> [sku](#input\_sku)| SKU tier of the Firewall. Possible values are Premium, Standard and Basic. | `string`| n/a |   yes    |
 | <a name="input_location"></a> [location](#input\_location)| Azure location| `string`| n/a |   yes    |
 | <a name="input_firewall_name"></a> [firewall\_name](#input\_firewall\_name)| Specifies the name of the Firewall. | `string`| n/a |   yes    |
-| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group)| The name of the resource group in which to create the route table| `string` | n/a     |   yes    |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group)| The name of the resource group in which to create the Azure firewall| `string` | n/a     |   yes    |
 | <a name="input_vnet_name"></a> [vnet\_name](#input\_vnet\_name)| Name of VNet where Firewall would be created. | `string`| n/a |   yes    |
 | <a name="input_subnet_cidr"></a> [subnet\_cidr](#input\_subnet\_cidr)| IP addresses range of 'AzureFirewallSubnet', has to be at least /26 | `string`| n/a |   yes    |
 | <a name="input_subnet_management_cidr"></a> [subnet\_management\_cidr](#input\_subnet\_management\_cidr)| IP addresses range of 'AzureFirewallManagementSubnet', has to be at least /26. This subnet created only when SKU is set to 'Basic' | `string`| null |   no    |
@@ -81,4 +82,4 @@ firewall-rule-collections
 
 ## License
 
-Apache 2 Licensed. For more information please see [LICENSE](https://github.com/data-platform-hq/terraform-azurerm-route-table/blob/main/LICENSE)
+Apache 2 Licensed. For more information please see [LICENSE](https://github.com/data-platform-hq/terraform-azurerm-firewall/blob/init/LICENSE)

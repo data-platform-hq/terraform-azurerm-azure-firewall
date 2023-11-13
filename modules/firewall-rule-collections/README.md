@@ -2,7 +2,7 @@
 Terraform module for creation Azure Firewall Rule Collections
 
 ## Usage
-This module is provisioning Azure Firewall
+This module is provisioning Azure Firewall Rule Collections
 ```hcl
 data "azurerm_firewall" "example" {
   name                = "example-name"
@@ -57,7 +57,7 @@ No modules.
 |---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------|:--------:|
 | <a name="input_firewall_name"></a> [firewall\_name](#input\_firewall\_name)| Target Azure Firewall name where collection rules would be created. | `string`| n/a |   yes    |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group)| Target Azure Firewall Resource Group | `string`| n/a |   yes    |
-| <a name="input_network_rule_collections"></a> [network\_rule\_collections](#input\_network\_rule\_collections)| Creates a network rule collection. |  <pre>list(object({<br>  name     = string,<br>  priority = number,<br>  action   = string,<br>  rules = list(object({<br>    name                  = string,<br>    source_addresses      = optional(list(string)),<br>    source_ip_groups      = optional(list(string)),<br>    destination_ports     = optional(list(string)),<br>    destination_addresses = optional(list(string)),<br>    destination_ip_groups = optional(list(string)),<br>    destination_fqdns     = optional(list(string)),<br>    protocols             = optional(list(string))<br>  }))<br>  }))</pre> | [] |   no    |
+| <a name="input_network_rule_collections"></a> [network\_rule\_collections](#input\_network\_rule\_collections)| Creates a network rule collection. |  <pre>list(object({<br>  name     = string,<br>  priority = number,<br>  action   = string,<br>  rules = list(object({<br>    name                  = string,<br>    source_addresses      = optional(list(string)),<br>    source_ip_groups      = optional(list(string)),<br>    destination_ports     = optional(list(string)),<br>    destination_addresses = optional(list(string)),<br>    destination_ip_groups = optional(list(string)),<br>    destination_fqdns     = optional(list(string)),<br>    protocols             = optional(list(string))<br>  }))<br>}))</pre> | [] |   no    |
 
 ## Outputs
 
@@ -68,4 +68,4 @@ No modules.
 
 ## License
 
-Apache 2 Licensed. For more information please see [LICENSE](https://github.com/data-platform-hq/terraform-azurerm<>/tree/master/LICENSE)
+Apache 2 Licensed. For more information please see [LICENSE](https://github.com/data-platform-hq/terraform-azurerm-firewall/blob/init/LICENSE)
