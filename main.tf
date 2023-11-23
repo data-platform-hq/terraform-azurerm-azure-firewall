@@ -47,7 +47,7 @@ resource "azurerm_firewall" "this" {
   dns_servers         = var.sku != "Basic" ? var.dns_servers : null
 
   ip_configuration {
-    name                 = "configuration"
+    name                 = "AzureFirewallIpConfiguration0"
     subnet_id            = module.subnet.id
     public_ip_address_id = azurerm_public_ip.fw.id
   }
