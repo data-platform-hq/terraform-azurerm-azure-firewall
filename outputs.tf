@@ -1,3 +1,13 @@
+output "id" {
+  value       = try(azurerm_firewall.this.id, null)
+  description = "Azure Firewall id"
+}
+
+output "public_ip_id" {
+  value       = try(azurerm_public_ip.fw.id, null)
+  description = "Azure Firewall public ip id"
+}
+
 output "subnet_id" {
   value       = try(module.subnet.id, null)
   description = "Azure Firewall subnet id"
