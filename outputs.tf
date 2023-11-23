@@ -34,16 +34,16 @@ output "public_ip_address" {
 }
 
 output "public_ip_id" {
-  value = try(azurerm_public_ip.fw.id, null)
+  value       = try(azurerm_public_ip.fw.id, null)
   description = "Azure Firewall public ip address id"
 }
 
 output "public_ip_name" {
-  value = try(azurerm_public_ip.fw.name, null)
+  value       = try(azurerm_public_ip.fw.name, null)
   description = "Azure Firewall public ip address name"
 }
 
 output "public_mgmt_ip_name" {
-  value = try(azurerm_public_ip.mgmt[0].name, null)
+  value       = try(azurerm_public_ip.mgmt[0].name, null)
   description = "Azure Firewall public mgmt ip address name"
 }
